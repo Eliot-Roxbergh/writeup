@@ -7,8 +7,15 @@ I am not a lawyer. Additionally, much is still up for debate and depends on juri
 
 [1] - https://copyleft.org/guide/
 
+# Table of Contents
+1. [GPL Main Points](#gpl-main-points)
+2. [(L)GPLv2 vs (L)GPLv3](#lgplv2-vs-lgplv3)
+3. [How is LGPL Weaker than GPL?](#how-is-lgpl-weaker-than-gpl)
+4. [Static vs Dynamic Linking is there a Legal Difference for GPL?](static-vs-dynamic-linking-is-there-a-legal-difference-for-gpl)\
+5. [What is License Compatibility?](#what-is-license-compatibility)
 
-## GPL main points
+
+## GPL Main Points
 
 It is not entirely clear when it is allowed for a proprietary (or otherwise licensed) work to depend on a GPL work, but the following paragraph shows what the GNU foundation themselves argue to be the case. Some argue that you can go further, and still not be contaminated (i.e. without being forced to release your work under the GPL or risk getting sued), such as to dynamically link against a GPL program. This is mentioned later in section on GPL linking.
 
@@ -108,7 +115,7 @@ Read more here [5, 7].
 
 
 
-## How is LGPL weaker than GPL?
+## How is LGPL Weaker than GPL?
 
 Your work gets contaminated by LGPL if it is "based on the library", e.g. if your work directly includes LGPL code or if your work cannot function without the LGPL parts (either by its own or by replacing the LGPL work).
 However, the LGPL is referred to as weak copyleft since much can be accomplished while "combined" with non-copyleft code which then falls under "works that use the library". [1]
@@ -135,9 +142,9 @@ Statically linking can easier be seen as "based on the library" and it could the
 
 
 
-## More questions
+## More Questions
 
-### GPL - Static vs dynamic linking is there a legal difference?
+### Static vs Dynamic Linking is there a Legal Difference for GPL?
 
 To avoid contamination, dynamic linking is generally safer from a legal perspective.
 
@@ -152,7 +159,7 @@ This was also discussed in an LWN article, which states; _"The key point is that
  This implies that (depending who you ask) declaring the wrong dependencies in a binary could trigger license compliance issues."_ [4]
 
 
-### What is license compatibility?
+### What is License compatibility?
 
 In general, license compatibility refers to the fact that you can combine multiple programs of different licenses (which you do not hold the copyright for) as long as you adhere to the license.
 For instance, you may take a BSD and a MIT licensed program and combine them into one proprietary program.
@@ -164,7 +171,7 @@ GPLv3 (and similar clause in GPLv2) states that "you may not impose any further 
 Therefore, one needs to be careful when claiming a license is compatible with GPL, possibly even if the license is listed as compatible by the FSF [p. 160, 5].
 
 
-#### License compatibility - example of use:
+#### License Compatibility - Example of Use:
 
 First, if there are multiple contributors (copyright holders) to a project all must agree to change the license (e.g. by signing a CLA).
 However, you may still change the license to a compatible license [6] (!), details are described here: [7].
