@@ -1,3 +1,5 @@
+# GPL Compliance
+
 In this document I have summarized some important things to keep in mind when using GPL, but I do recommend reading the relevant licenses - also explained in detail here [1]. The focus is on GPLv3, but GPLv2, LGPLv2.1, and LGPLv3 are also discussed.
 I am not a lawyer. Additionally, much is still up for debate and depends on jurisdiction and case law.
 
@@ -6,15 +8,16 @@ I am not a lawyer. Additionally, much is still up for debate and depends on juri
 [1] - https://copyleft.org/guide/
 
 
-# The GPL and its allowed use with a proprietary work
+## GPL main points
 
 It is not entirely clear when it is allowed for a proprietary (or otherwise licensed) work to depend on a GPL work, but the following paragraph shows what the GNU foundation themselves argue to be the case. Some argue that you can go further, and still not be contaminated (i.e. without being forced to release your work under the GPL or risk getting sued), such as to dynamically link against a GPL program. This is mentioned later in section on GPL linking.
 
+So to be sure your work is not contaminated by GPL, the following should apply;
 The work should be an aggregate (as per GPL license), meaning that it is separate and independent from the GPL licensed program. Therefore, the work should be able to function on its own, and any GPL components easily exchanged.
 For instance, it is allowed to use a GPL-covered plug-in as long as it DOES NOT form a single combined program with the work. So, you are allowed to use fork and exec to run the external GPL binary. [1]
 The term used is that both works should communicate "at arms length" [2]. At a minimum, the programs should run as separate processes and communicate over an IPC mechanism like pipes. They cannot directly share any data structures. [3]
 
-GPL does not apply if the project is only used privately or internally within the company, and not distributed to anyone else [4].
+The GPL does not apply if the project is only used privately or internally within a company, and not distributed to anyone else [4].
 
 If you convey a work covered by GPL in a non-source format (e.g. as a binary), additional to the source code, you are also required to provide installation instructions.
 These instructions could include makefiles and installation scripts, or whatever is necessary to generate and (if applicable) run the executable.
@@ -72,7 +75,7 @@ Side note, LGPLv3 incorporates the full GPLv3 license and is therefore equivalen
 
 
 
-# (L)GPLv2 vs (L)GPLv3
+## (L)GPLv2 vs (L)GPLv3
 
 GPLv3 and LGPLv3 are generally stricter than GPLv2 and LGPLv2.1 respectively.
 
@@ -105,7 +108,7 @@ Read more here [5, 7].
 
 
 
-# How is LGPL weaker than GPL?
+## How is LGPL weaker than GPL?
 
 Your work gets contaminated by LGPL if it is "based on the library", e.g. if your work directly includes LGPL code or if your work cannot function without the LGPL parts (either by its own or by replacing the LGPL work).
 However, the LGPL is referred to as weak copyleft since much can be accomplished while "combined" with non-copyleft code which then falls under "works that use the library". [1]
@@ -132,7 +135,7 @@ Statically linking can easier be seen as "based on the library" and it could the
 
 
 
-# Questions - GPL
+## More questions
 
 ### GPL - Static vs dynamic linking is there a legal difference?
 
