@@ -1,12 +1,14 @@
-In this document I have summarized some important things to keep in mind when using (L)GPL, but I do recommend reading the relevant licenses - also explained in detail here [1].
-I am not a lawyer. Additionally, much is still up to debate and depends on jurisdiction and case law.
+In this document I have summarized some important things to keep in mind when using GPL, but I do recommend reading the relevant licenses - also explained in detail here [1]. The focus is on GPLv3, but GPLv2, LGPLv2.1, and LGPLv3 are also discussed.
+I am not a lawyer. Additionally, much is still up for debate and depends on jurisdiction and case law.
+
+----
 
 [1] - https://copyleft.org/guide/
 
 
-# Licensing and allowed use of GPL with a proprietary product
+# The GPL and its allowed use with a proprietary work
 
-It is not entirely clear what the case is when a proprietary work depends on a GPL work, but the following paragraph shows what the GNU foundation themselves argue to be the case. Some argue that you can go further, and still not be contaminated, such as to dynamically link against a GPL program. This is mentioned later in section on GPL linking.
+It is not entirely clear when it is allowed for a proprietary (or otherwise licensed) work to depend on a GPL work, but the following paragraph shows what the GNU foundation themselves argue to be the case. Some argue that you can go further, and still not be contaminated (i.e. without being forced to release your work under the GPL or risk getting sued), such as to dynamically link against a GPL program. This is mentioned later in section on GPL linking.
 
 The work should be an aggregate (as per GPL license), meaning that it is separate and independent from the GPL licensed program. Therefore, the work should be able to function on its own, and any GPL components easily exchanged.
 For instance, it is allowed to use a GPL-covered plug-in as long as it DOES NOT form a single combined program with the work. So, you are allowed to use fork and exec to run the external GPL binary. [1]
@@ -105,15 +107,14 @@ Read more here [5, 7].
 
 # How is LGPL weaker than GPL?
 
-Your work gets contaminated by LGPL if it is "based on the library", e.g. if your work directly includes LGPL code or if your work cannot function without the LGPL work (either by its own or by replacing the LGPL work).
-The LGPL is referred to as weak copyleft since much can be accomplished while "combined" with non-copyleft code which then falls under "works that use the library". [1]
+Your work gets contaminated by LGPL if it is "based on the library", e.g. if your work directly includes LGPL code or if your work cannot function without the LGPL parts (either by its own or by replacing the LGPL work).
+However, the LGPL is referred to as weak copyleft since much can be accomplished while "combined" with non-copyleft code which then falls under "works that use the library". [1]
 
-In this later case, your work is not contaminated and the following applies;
-You may link against an LGPL licensed library without licensing your work under LGPL, specifically;
+In this later case, your work is not contaminated even if you link against an LGPL licensed library, provided the following;
 You may dynamically link against LGPL licensed libraries without disclosing your work, although if you provide the LGPL library (dynamically linked) you also need to provide its source.
 On the other hand, if you statically link you need to provide information to enable user to relink the software,
 this might for instance be the object files of your work. [2]
-Statically linking can easier be seen as "based on the library" and it could therefore be safer to dynamically link when possible or relicense under LGPL [3].
+Statically linking can easier be seen as "based on the library" and it could therefore be safer to dynamically link when possible (or relicense under LGPL) [3].
 
 ----
 
@@ -134,6 +135,8 @@ Statically linking can easier be seen as "based on the library" and it could the
 # Questions - GPL
 
 ### GPL - Static vs dynamic linking is there a legal difference?
+
+To avoid contamination, dynamic linking is generally safer from a legal perspective.
 
 FSF describes that it is not in any way allowed for a proprietary program to directly link to a program licensed under GPL [2] (as described earlier they need to communicate "at arms length").
 However, it has been claimed that (in some jurisdictions) it is acceptable to dynamically link to GPL code assuming that the proprietary work is separate from the GPL work and does not depend on it.
