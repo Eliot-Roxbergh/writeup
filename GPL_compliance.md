@@ -11,6 +11,8 @@
 In this document I have summarized some important things to keep in mind when using GPL, but I do recommend reading the relevant licenses - also explained in detail here [1]. The focus is on GPLv3, but GPLv2, LGPLv2.1, and LGPLv3 are also discussed.
 I am not a lawyer. Additionally, much is still up for debate and depends on jurisdiction and case law.
 
+_Eliot Roxbergh 2021-01-27_
+
 ----
 
 [1] - https://copyleft.org/guide/
@@ -170,7 +172,6 @@ Far from every licenses is compatible, as each obligation in the licenses must b
 GPLv3 (and similar clause in GPLv2) states that "you may not impose any further restrictions on the exercise of the rights granted or affirmed", which limits its compatibility with other licenses.
 Therefore, one needs to be careful when claiming a license is compatible with GPL, possibly even if the license is listed as compatible by the FSF [p. 160, 5].
 
-
 #### License Compatibility - Example of Use:
 
 First, if there are multiple contributors (copyright holders) to a project all must agree to change the license (e.g. by signing a CLA).
@@ -199,3 +200,5 @@ For instance, GPLv3 and Apache 2.0 are compatible, and together a combined work 
 [6] - https://opensource.stackexchange.com/questions/33/how-can-a-project-be-relicensed/46#46
 
 [7] - https://www.gnu.org/licenses/license-compatibility.html
+
+_© 2021 Eliot Roxbergh All Rights Reserved_
